@@ -11,7 +11,7 @@ The LED transmitter sends a dataframe, including the room number that has been p
 ### Transmitter
 The transmitter is built upon an Arduino Due with the CESE4110 VLCS course shield on top:
 
-![VLCS Arduino Transmitter](https://github.com/austinjphillips/android-vlc-decoder/blob/main/images/vlc-board.png?raw=true)
+![VLCS Arduino Transmitter](https://github.com/austinjphillips/android-vlc-decoder/blob/main/images/VLC-board.png?raw=true)
 
 Since the dataframe must be received while passing under the transmitter, the dataframe format was kept as short as possible to minimize the transmission time. The standard format uses only three bytes that are placed in the dataframe as follows:
 
