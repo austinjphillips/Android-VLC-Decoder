@@ -9,7 +9,11 @@ The LED transmitter sends a dataframe, including the room number that has been p
 ## Methodology
 
 ### Transmitter
-The transmitter is built upon an Arduino Due with the CESE4110 VLCS course shield on top. Since the dataframe must be received while passing under the transmitter, the dataframe format was kept as short as possible to minimize the transmission time. The standard format uses only three bytes that are placed in the dataframe as follows:
+The transmitter is built upon an Arduino Due with the CESE4110 VLCS course shield on top:
+
+![VLCS Arduino Transmitter](https://github.com/austinjphillips/android-vlc-decoder/blob/main/images/vlc-board.png?raw=true)
+
+Since the dataframe must be received while passing under the transmitter, the dataframe format was kept as short as possible to minimize the transmission time. The standard format uses only three bytes that are placed in the dataframe as follows:
 
 | 1st byte | 2nd byte | 3rd byte |
 | --- | --- | --- |
@@ -28,10 +32,14 @@ The receiver obtains the dataframe from the smartphone's camera, making use of i
 
 Apart from the image processing task, the receiver follows a standard procedure for the data reception: preamble detection, Manchester decoding, CRC checking, and message decoding. As mentioned previously, the received message will then be checked with the timetable if received successfully and a popup will be displayed to indicate whether the person has entered the right room or not. These steps have all been visualized in the custom android app for a better user experience.
 
+![VLCS Android App Layout](https://github.com/austinjphillips/android-vlc-decoder/blob/main/images/app-layout.png?raw=true)
+
 ## Evaluation
 
 ### Setup
 To test the Android app, the LED transmitter and the smartphone camera are set up in a bright office. The smartphone is positioned with the front display facing upwards, as this would mimic the position that someone would hold their phone as they walk through a door.
+
+![VLCS Test Setup](https://github.com/austinjphillips/android-vlc-decoder/blob/main/images/test-setup.png?raw=true)
 
 The transmitter is hand-held to simulate hand jitter, and is rotated and tilted to test reliability. The data rates and error data are measured to assess how the system performs within these conditions, and is used to improve the system.
 
