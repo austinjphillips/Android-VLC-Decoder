@@ -39,7 +39,7 @@ Apart from the image processing task, the receiver follows a standard procedure 
 ### Setup
 To test the Android app, the LED transmitter and the smartphone camera are set up in a bright office. The smartphone is positioned with the front display facing upwards, as this would mimic the position that someone would hold their phone as they walk through a door.
 
-<img src="https://github.com/austinjphillips/android-vlc-decoder/blob/main/images/test-setup.png" width=30% height=30%>
+<img src="https://github.com/austinjphillips/android-vlc-decoder/blob/main/images/test-setup.png" width=40% height=40%>
 
 The transmitter is hand-held to simulate hand jitter, and is rotated and tilted to test reliability. The data rates and error data are measured to assess how the system performs within these conditions, and is used to improve the system.
 
