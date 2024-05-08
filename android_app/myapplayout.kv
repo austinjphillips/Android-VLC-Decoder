@@ -1,0 +1,42 @@
+<MyLayout>
+    orientation: 'vertical'
+    size: root.width, root.height
+
+    progress_image: progress_image
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: '50dp'
+
+        Button:
+            text: 'Red LED'
+            on_press: root.ids.android_camera.set_led_color(0)
+
+        Button:
+            text: 'Blue LED'
+            on_press: root.ids.android_camera.set_led_color(1)
+
+    AndroidCamera:
+        id: android_camera
+        fit_mode: 'contain'
+        play: True
+        progress_image: progress_image
+
+    ProgressImage:
+        id: progress_image
+        source: './images/init.png'
+        allow_stretch: True
+
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint_y: None
+        height: '50dp'
+
+        Button:
+            text: 'CRC'
+            on_press: root.ids.android_camera.set_encoding(0)
+
+        Button:
+            text: 'Parity'
+            on_press: root.ids.android_camera.set_encoding(1)
